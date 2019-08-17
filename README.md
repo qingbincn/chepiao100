@@ -497,7 +497,7 @@ array(4) {
   
 ![](https://github.com/phpbin/chepiao100/blob/master/css/images/img5.1.png)
 
-##### 5.2 订单提交
+##### 5.2 订单信息
 地址：http://v3.chepiao100.com/v30.api?do=train.order.submit
 
 |函数/参数|用途|
