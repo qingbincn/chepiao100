@@ -8,7 +8,7 @@
 
 ##### 2.1 用户授权
 **测试期暂时免费，合作联系QQ：89914505 / 2994273988**
-演示地址：http://v3.chepiao100.com/demo/bus.php
+演示地址：http://v3.chepiao100.com/demo
 
 ```php
 // 测试账号
@@ -36,7 +36,11 @@ $header => [
 ```
 
 ##### 2.2 字符编码
->  数据中心接口接收和返回统一以UTF-8字符集编码格式进行接收返回
+>  数据中心接口接收和返回统一以UTF-8字符集编码格式进行接收返回   
+>  WEB应用请在网页头部添加  
+```html
+<script type="text/javascript" src="http://v3.chepiao100.com/script.js"></script>
+```
 
 
 #### 3 用户登录

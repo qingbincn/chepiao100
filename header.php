@@ -12,6 +12,7 @@ error_reporting(E_ALL^E_NOTICE);
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link type="text/css" href="plugins/validate/css/screen.css" rel="stylesheet"/>
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="http://v3.chepiao100.com/script.js"></script>
 <script type="text/javascript" src="plugins/validate/jquery.validate.js"></script>
 <script type="text/javascript" src="plugins/validate/localization/messages_zh.js"></script>
 </head>
