@@ -35,7 +35,7 @@ error_reporting(E_ALL^E_NOTICE);
 &nbsp;|
 <a href="bus.php">汽车票查询</a>
 &nbsp;|
-<a href="../help/train_api_v2.0.pdf" target="_blank">接口文档</a>
+<a href="https://github.com/phpbin/chepiao100" target="_blank">接口文档</a>
 <a href="contact.php">联系我们</a>
 </div>
 </div>

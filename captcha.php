@@ -21,7 +21,7 @@ $param['module']  = $_GET['module'];
 $train = new TrainApi();
 $train->method('train.captcha.base64');
 $data = $train->action($param);
-echo base64_decode($data['base64']);
+echo base64_decode($data['datas']['base64']);
 exit();
 
 // 自动识别验证码
@@ -37,6 +37,6 @@ $data = $train->action($dmParam);
 
 
 if ($data['errMsg'] == 'Y') {
-    $_SESSION['answer'] =  $data['answer'];
-    $_SESSION['result'] = $data['result'];
+    $_SESSION['answer'] =  $data['datas']['answer'];
+    $_SESSION['result'] = $data['datas']['result'];
 }

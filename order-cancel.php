@@ -13,6 +13,7 @@ if ($_GET['action'] == 'cancel') {
   $train = new TrainApi();
   $train->method('train.order.cancel');
   $data = $train->action($param);
+  
   if ( $data['errMsg'] == 'Y'){
     echo '<script>alert("订单取消成功！");location.href = "order-no.php"; </script>';
   } else {

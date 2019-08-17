@@ -3,8 +3,8 @@
 <?php
 $train = new TrainApi();
 $train->method('Train/Passengers/userInfo');
-$userInfo = $train->action(array('session'=>$_SESSION['session']));
-$userData = $userInfo['data'];
+$userInfo = $train->action(array('token'=>$_SESSION['token']));
+$userData = $userInfo['datas'];
 ?>
 <div class="form wrap1200">
     <h1>用户信息：</h1>
@@ -13,23 +13,15 @@ $userData = $userInfo['data'];
       <tbody>
         <tr>
           <td width="15%">姓名：</td>
-          <td width="85%"><?php echo $userData['name']; ?></td>
+          <td width="85%"><?php echo $userData['user_name']; ?></td>
         </tr>
         <tr>
-          <td>性别：</td>
-          <td><?php echo $userData['sex_name']; ?></td>
+          <td>邮件：</td>
+          <td><?php echo $userData['email']; ?></td>
         </tr> 
         <tr>
-          <td>证件类型：</td>
-          <td><?php echo $userData['id_name']; ?></td>
-        </tr>
-        <tr>
-          <td>证件号码：</td>
-          <td><?php echo $userData['id_no']; ?></td>
-        </tr>
-        <tr>
-          <td>旅客类型：</td>
-          <td><?php echo $userData['type_name']; ?></td>
+          <td>欢迎：</td>
+          <td><?php echo $userData['user_regard']; ?></td>
         </tr>
       </tbody>
     </table>
