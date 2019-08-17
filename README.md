@@ -8,6 +8,7 @@
 
 ##### 2.1 用户授权
 **测试期暂时免费，合作联系QQ：89914505 / 2994273988**
+演示地址：http://v3.chepiao100.com/demo/bus.php
 
 ```php
 // 测试账号
@@ -49,7 +50,7 @@ $header => [
 地址：http://v3.chepiao100.com/v30.api?do=train.user.token
 
 正确返回
-```json
+```
 array(3) {
   ["errMsg"]=>
   string(1) "Y"   // errMsg == Y 表示数据正常
@@ -64,7 +65,7 @@ array(3) {
 ```
 
 错误返回
-```json
+```
   ["errMsg"]=>
   string(1) "生成Token失败!"
   ["errcode"]=>
@@ -81,7 +82,7 @@ array(3) {
 |module | 登录时login, 提交订单时passenger |
 
 返回数据
-```json
+```
 array(2) {
   ["errMsg"]=>
   string(1) "Y"
@@ -103,7 +104,7 @@ array(2) {
 | password | 打码平台密码  |
 
 返回数据
-```json
+```
 array(3) {
   ["errMsg"]=>
   string(1) "Y"
@@ -125,7 +126,7 @@ array(3) {
 | answer | 验证码坐标 |
 
 返回数据
-```json
+```
 array(2) {
   ["errMsg"]=>
   string(1) "Y"
@@ -135,7 +136,7 @@ array(2) {
 ```
 
 错误返回
-```json
+```
 array(2) {
   ["errMsg"]=>
   string(1) "验证失败!"
@@ -155,7 +156,7 @@ array(2) {
 | answer | 验证码坐标 |
 
 返回数据
-```json
+```
 array(4) {
   ["errMsg"]=>
   string(1) "Y"
@@ -174,7 +175,7 @@ array(4) {
 ```
 
 错误返回
-```json
+```
 array(2) {
   ["errMsg"]=>
   string(1) "登录失败"
@@ -189,7 +190,7 @@ array(2) {
 地址：http://v3.chepiao100.com/v30.api?do=train.user.info
 
 返回数据
-```json
+```
 array(4) {
   ["errMsg"]=>
   string(1) "Y"
@@ -217,7 +218,7 @@ array(4) {
 |token| Token值 |
 
 返回数据
-```json
+```
 array(4) {
   ["errMsg"]=>
   string(1) "Y"
@@ -242,7 +243,7 @@ array(4) {
 | train_date | 乘车日期  YYYY-MM-DD|
 
 返回数据
-```json
+```
   ["errMsg"]=>
   string(1) "Y"   // 请求成功
   ["status"]=>
@@ -318,7 +319,7 @@ array(4) {
 | train_code | 车次 (大写)  |
 
 返回数据
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -421,7 +422,7 @@ array(4) {
 | station_name | 车站名称  |
 
 返回数据
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -478,7 +479,7 @@ array(4) {
 |station_name | 车站 |
 
 返回数据
-```json
+```
   ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -509,7 +510,7 @@ array(4) {
 | order_token | order_token 余票查询中获取  |
 
 返回数据
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -570,7 +571,7 @@ array(4) {
 | ticket_token | ticket_token订票Token | 
 
 返回数据
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -600,7 +601,7 @@ array(4) {
 | ticket_token | ticket_token订票Token | 
 
 返回数据：
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -633,7 +634,7 @@ array(4) {
 
 
 返回数据
-```json
+```
 {
 	"errMsg": "Y",
 	"status": 1,    // status == 1表示已成功提交到队列
@@ -652,7 +653,7 @@ array(4) {
 | ticket_token | ticket_token订票Token | 
 
 返回数据
-```json
+```
 {
 	"errMsg": "Y",
 	"status": 1,
@@ -675,7 +676,7 @@ array(4) {
 | sequence_no | sequence_no 订单号 |
 
 返回数据：
-```json
+```
 {
 	"errMsg": "Y",
 	"status": 1,    
@@ -701,7 +702,7 @@ array(4) {
 | sequence_no | sequence_no 订单号 |
 
 返回数据
-```json
+```
   ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -750,7 +751,7 @@ array(4) {
 > 根据返回的结果，组合成Form表单提交到支付页
 
 返回数据：
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -783,7 +784,7 @@ array(4) {
 | token | Token |
 
 返回数据
-```json
+```
  ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -860,7 +861,7 @@ array(4) {
 | sequence_no | sequence_no 订单号 |
 
 返回数据
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -881,7 +882,7 @@ array(4) {
 | keyword | 关键字：订单号/乘车人姓名  |
 
 返回数据
-```json
+```
  ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -960,7 +961,7 @@ array(4) {
 | cancel_token | 退票 |
 
 返回数据
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -997,7 +998,7 @@ array(4) {
 | token | Token |
 
 返回数据：
-```json
+```
  ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -1037,7 +1038,7 @@ array(4) {
 | token | Token |
   
 返回数据：  
-```json
+```
  ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -1090,7 +1091,7 @@ array(4) {
 |passenger_type|旅客类型 |
 
 返回数据
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -1117,7 +1118,7 @@ array(4) {
 | allEncStr |乘车人密钥 |
 
 返回数据
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -1139,7 +1140,7 @@ array(4) {
 | allEncStr |乘车人密钥 |
 
 返回数据
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -1154,7 +1155,7 @@ array(4) {
 地址：http://v3.chepiao100.com/v30.api?do=train.agency.province
 
  返回数据
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -1178,7 +1179,7 @@ array(4) {
 |province|省份|
 
 返回数据：
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -1203,7 +1204,7 @@ array(4) {
 |city|城市|
 
 返回数据：
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -1229,7 +1230,7 @@ array(4) {
 |county|县区|
 
 返回数据：
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
@@ -1267,7 +1268,7 @@ array(4) {
 |start_date|日期|
 
 返回数据：
-```json
+```
 ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
