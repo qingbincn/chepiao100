@@ -22,11 +22,10 @@ $train = new TrainApi();
 $train->method('train.captcha.base64');
 $data = $train->action($param);
 echo base64_decode($data['datas']['base64']);
-exit();
 
 // 自动识别验证码
 $dmParam = [
-    'base64'   => $data['base64'], 
+    'base64'   => $data['datas']['base64'], 
     'username' => 'suanyaios', 
     'password' => 'suanyaios'
 ];

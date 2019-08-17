@@ -2,7 +2,7 @@
 <?php require 'session.php';?>
 <?php
 $train = new TrainApi();
-$train->method('Train/Passengers/userInfo');
+$train->method('train.user.info');
 $userInfo = $train->action(array('token'=>$_SESSION['token']));
 $userData = $userInfo['datas'];
 ?>
