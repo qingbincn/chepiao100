@@ -21,8 +21,14 @@ $param['module']  = $_GET['module'];
 $train = new TrainApi();
 $train->method('train.captcha.base64');
 $data = $train->action($param);
-echo base64_decode($data['datas']['base64']);
-exit();
+
+if ($data['errMsg'] == 'Y') {
+    echo base64_decode($data['datas']['base64']);
+    exit();
+} else {
+    echo file_get_contents('css/images/default.jpg');
+    exit();
+}
 
 // 自动识别验证码
 $dmParam = [
