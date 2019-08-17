@@ -748,7 +748,6 @@ array(4) {
 |函数/参数|用途|
 |--|--|
 | token | Token |
-| sequence_no | sequence_no 订单号 |
 | bankId | 支付/银行ID  |
 | pay_token | 支付Token |
 
@@ -957,7 +956,7 @@ array(4) {
 ##### 8.4 退票提醒
 > 说明：退票提醒之后，要紧接着 确认退票才能操作成功。
   
- 地址：http://v3.chepiao100.com/v30.api?do=train.order.refund
+地址：http://v3.chepiao100.com/v30.api?do=train.order.affirm
 
 |函数/参数|用途|
 |--|--|
@@ -986,6 +985,30 @@ array(4) {
         'return_cost'      => "",	// 退票费
         'return_rate'      => "",   // 退票费率
         'return_price'     => "",   // 实际退票
+  }
+}
+```
+
+##### 8.5 确认退票
+  
+地址：http://v3.chepiao100.com/v30.api?do=train.order.refund
+
+
+返回数据
+```
+["errMsg"]=>
+  string(1) "Y"
+  ["status"]=>
+  int(1)
+  ["datas"]=>
+  array(2) {
+    'refund_no'     => "",  // 流水号
+    'train_date'    => "",  // 乘车日期
+    'train_code'    => "",  // 车次
+    'ticket_price'  => "",  // 原票价
+    'return_cost'   => "",	// 退票费
+    'return_rate'   => "",  // 退票费率
+    'return_price'  => "",  // 实际退票
   }
 }
 ```
