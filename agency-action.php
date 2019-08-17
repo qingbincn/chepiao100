@@ -54,7 +54,7 @@ if ($_GET['action'] == 'query') {
          <td><?php echo $key+1; ?></td>
          <td><?php echo $val['agency_name']; ?></td>
          <td><?php echo $val['address']; ?></td>
-         <td style="padding-right:20px;"><?php echo $val['morning'].' <br/> '.$val['aftermon']; ?></td>
+         <td style="padding-right:20px;"><?php echo $val['morning'].' -- '.$val['afternoon']; ?></td>
          <td><?php echo $val['windows']; ?></td>
        </tr>
        <?php endforeach; ?>
