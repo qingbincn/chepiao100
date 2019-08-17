@@ -1,6 +1,0 @@
-[使用说明]
-config.php 配置授权参数
-
-授权获取地址：http://www.chepiao100.com/my/key.html
-
-sss
