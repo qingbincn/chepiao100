@@ -42,7 +42,8 @@ $header => [
 > 使用12306.cn账号进行授权登录
 
 ##### 3.1 登录流程
-![](css/images/img3.1.png)
+  
+![](https://github.com/phpbin/chepiao100/blob/master/css/images/img3.1.png)
 
 ##### 3.2 获取Token
 地址：http://v3.chepiao100.com/v30.api?do=train.user.token
@@ -493,7 +494,7 @@ array(4) {
 
 #### 5 在线订票
 ##### 5.1 订票流程图
-![](css/images/img5.1.png]
+!()[https://github.com/phpbin/chepiao100/blob/master/css/images/img5.1.png)
 
 ##### 5.2 订单提交
 地址：http://v3.chepiao100.com/v30.api?do=train.order.submit
@@ -687,7 +688,7 @@ array(4) {
 
 #### 6 订单支付
 ##### 6.1 支付流程
-![](css/images/img6.1.png)
+![](https://github.com/phpbin/chepiao100/blob/master/css/images/img6.1.png)
 
 ##### 6.2 支付方式
  地址：http://v3.chepiao100.com/v30.api?do=train.pay.gateway
