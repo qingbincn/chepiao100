@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>datapick-demo</title>
+<link type="text/css" rel="stylesheet" href="css/jquery.autocomplete.css" />
+<script type="text/javascript" src="http://localhost/gia/application/views/statics/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/station_name.js"></script>
+<script type="text/javascript" src="js/code_name.js"></script>
+<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+</head>
+<body>
+
+<input type="text" class="TextInput" id="station" name="station" value=""/>
+<p>
+<input type="text" class="TextInput" id="code" name="code" value=""/>
+	
+					
+<script type="text/javascript">
+$().ready(function() 
+{
+	$("#station").autocomplete(station_array, {
+		minChars: 0,
+		width: 200,
+		max: 10,
+		scrollHeight: 300,
+		matchContains: true,
+		autoFill: false,
+		formatItem: function(data) 
+		{
+		    var temp = data[0].split("|");
+			return temp[1] + "(" + temp[0] + ")";
+		},
+		formatMatch: function(data) 
+		{
+		    var temp = data[0].split("|");
+			return temp[1] + "(" + temp[0] + ")";
+		},
+		formatResult: function(data) 
+		{
+			return data[0].split("|")[1];
+		}
+	}).result(function(event, data, formatted) {
+	    var hidden = $(this).parent().next().find(">:input");
+	    hidden.val( (hidden.val() ? hidden.val() + ";" : hidden.val()));
+	    $("#loading").hide();
+  });
+  // -------------------------------------------------------------------
+  $("#code").autocomplete(code_array, {
+		minChars: 0,
+		width: 200,
+		max: 10,
+		scrollHeight: 300,
+		matchContains: true,
+		autoFill: false,
+		formatItem: function(data) 
+		{
+			return data[0];
+		},
+		formatMatch: function(data) 
+		{
+		    return data[0];
+		},
+		formatResult: function(data) 
+		{
+			return data[0];
+		}
+	}).result(function(event, data, formatted) {
+	    var hidden = $(this).parent().next().find(">:input");
+	    hidden.val( (hidden.val() ? hidden.val() + ";" : hidden.val()));
+	    $("#loading").hide();
+  });
+});
+</script>
+
+</body>
+</html>

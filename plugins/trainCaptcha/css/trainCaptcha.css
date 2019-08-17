@@ -1,0 +1,13 @@
+.TrainCaptcha{border:#DDD solid 1px; background-color:#FFF; width:300px; height:188px; text-align:center; padding:0px 6px;}
+.TrainCaptcha .container{position:relative; width:300px; height:188px; background:url(../imgs/loading.gif) no-repeat center center; background-size:50px;}
+
+.TrainCaptcha .container .touclick{width:54px; height:25px; background-image:url(../imgs/captcha.png); position:absolute; top:2px; right:0px; cursor:pointer;}
+.TrainCaptcha .container .touclick:active{background-position:0px -25px;}
+
+.TrainCaptcha .container>img{width:100%; height:100%;}
+
+.TrainCaptcha .container .toucblock{width:27px; height:27px; background-image:url(../imgs/captcha.png); background-position:0px -96px;}
+.TrainCaptcha .container .toucblock{position:absolute; top:0px; left:0px;}
+
+.TrainCaptcha .success{background-image:url(../imgs/captcha.png); background-position:0px -393px; background-size:auto;}
+.TrainCaptcha .failure{background-image:url(../imgs/captcha.png); background-position:0px -203px; background-size:auto;}

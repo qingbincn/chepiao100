@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{margin: 0;padding: 0;}
+.doc{width: 860px;margin: 0 auto;}
+.doc h2{font-size: 20px;margin: 20px;}
+.doc button.btn{margin: 40px auto;height: 30px;line-height: 30px;font-size: 16px;border-radius: 3px;margin-left: 10px;min-width: 100px;border: none;color: #fff;font-size: 14px;cursor: pointer;}
+.doc button.open{background: #651E7E;}
+.doc button.close{background: #DDB0EC;border: 1px solid #DDB0EC;}
+</style>
+<link href="css/dialog.css" rel="stylesheet"/>
+<title>简单的jQuery confirm对话框弹出层代码 - 素材家园 - www.sucaijiayuan.com</title>
+</head>
+<body>
+<div class="doc">
+    <div class="btns">
+        <button class="open btn" id="open">Open</button>
+    </div>
+</div>
+<div class="dialog-demo-box" style="display:none;"></div>
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/dialog.js"></script>
+<script>
+$(function(){
+	$("#open").click(function(){
+		var $d = $(".dialog-demo-box");
+		$d.dialog({
+			title: '素材家园',					// title
+			dragable:true,
+			html: '', 						// html template
+			width: 400,					// width
+			height: 200,				// height
+			cannelText: '取消',		// cannel text
+			confirmText: '确认',	// confirm text
+			showFooter:true,
+			onClose: function(){	// colse callback
+			  alert('你点了关闭按钮!');
+			},
+			onOpen: false,				// open callback
+			onConfirm: function() { //  confirm callback required
+				alert('你点了确认按钮!');
+				return false;
+				$d.dialog().close();
+			},
+			onCannel: function(){  	// Cannel callback
+				alert('你点了取消按钮!');
+			},
+			getContent:function(){ 	// get Content callback
+				$d.find('.body-content').html('素材家园专注于提供免费素材下载,其内容涵盖设计素材,PSD素材,矢量素材,图片素材,图标素材,设计字体等免费素材.下载免费素材尽在素材家园免费素材网');
+			}
+		}).open();
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+body {color:#333333;font:13px/1.5em Verdana,Arial,"Microsoft YaHei";margin:0px; background-color:#f3f3f3;}
+.wrap1200{width:1200px; margin:auto; background-color:rgba(255,255,255,0.95); padding:0px 20px;}
+.wrap200{width:350px; margin:auto; background-color:rgba(255,255,255,0.95); padding:0px 20px;}
+.wrap200 td{height:20px; line-height:20px;}
+.wrap500{width:500px;background-color:#FFFFFF;padding:0px 20px;}
+
+.input{outline:none;}, .input:focus{outline:none;}
+
+a{color:#0080FF; text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+.header{height:50px; line-height:50px; background-color:#363636; color:#FFF;}
+.header .menu{float:right;}
+.header .menu>a{margin-left:10px;}
+.header a{color:#FFF;}
+
+.main{padding-bottom:30px; text-align:center; height:100px; line-height:100px; font-size:18px; color:#009966;}
+
+.form{padding-bottom:30px;}
+.form h1{margin:0px; font-size:16px; padding:20px 0px 10px 5px; border-bottom:#e8e8e8 dotted 1px;}
+.form h1>a{float:right; font-size:14px; font-weight:normal; margin-left:12px;}
+.form th{text-align:left; height:30px; line-height:30px; padding-left:5px; border-bottom:#333 solid 2px; padding-top:10px;}
+.form td{height:35px; font-size:13px; line-height:25px;padding-left:5px; border-bottom:#e8e8e8 dotted 1px;}
+.form td>br{line-height:50px;}
+.form td .price{color:#E20055;}
+.form td .message{font-size:12px; width:60px; color:#999;}
+.form td .bookBtn{background-color:#FB7403; padding:5px 15px; color:#FFF;}
+
+.form .red{color:#F94100;}
+.form .errMsg{color:#FF6C00; background-color:#FFFDEE; margin:1px 0 0 0;}
+.form .head{background-color:#f0f0f0;}
+
+.form .login{ width:500px; margin:auto;}
+.form .login input{height:40px; line-height:40px; width:307px; border:#EEE solid 1px; padding:2px 6px;}
+.form .login select{height:40px; line-height:40px; width:307px; border:#EEE solid 1px; padding:2px 6px;}
+.form .login input[type=button], .form .login input[type=submit]{background-color:#fb7403; color:#FFF; border:none; cursor:pointer;}
+.form .login table td{height:55px; line-height:55px; padding:0 0 0 5px;}
+.form .login table .captcha{padding:5px;}
+.form .login table tr:last-child td{border-bottom:none;}
+
+.form .search{font-size:16px; font-weight:normal; border-bottom:#eee solid 1px; padding:0px; margin:0px; height:50px; line-height:50px;}
+.form .search input{height:35px; line-height:35px; width:150px; border:#EEE solid 1px; padding:2px 6px; margin-right:15px;}
+.form .search select{height:35px; line-height:35px; width:166px; border:#EEE solid 1px; padding:2px 6px; margin-right:15px;}
+.form .search input[type=submit],.form .search input[type=button]{height:35px; line-height:35px; width:250px; border:#DDD solid 1px; padding:0x 5px;}
+.form .search input[type=submit],.form .search input[type=button]{background-color:#E20055; color:#FFF; border:none; width:100px; cursor:pointer; vertical-align:-2px;}
+
+.form .trainInfo .info{font-size:16px; font-weight:bold; padding:10px 0px; border-bottom:#e8e8e8 dotted 1px;}
+.form .trainInfo .info>span{font-size:14px; font-weight:normal;}
+.form .trainInfo .yp{padding:5px 0px;}
+.form .trainInfo .yp .has{color:#fb7403;}
+.form .trainInfo .yp .no{color:#999;}
+
+.form .passengerInfo ul{margin:0px; padding:10px 0px;}
+.form .passengerInfo ul label{cursor:pointer}
+
+.form .ypinfo select{height:30px; line-height:30px; width:120px;}
+.form .ypinfo .add{padding:10px 0px;}
+
+.form .captchaInfo{text-align:center;}
+.form .captchaInfo .TrainCaptcha{margin:auto;}
+.form .captchaInfo input[type=button]{height:40px; line-height:40px; width:307px; border:#DDD solid 1px; padding:2px 6px;}
+.form .captchaInfo input[type=button]{background-color:#fb7403; color:#FFF; border:none; cursor:pointer; margin-top:20px;}
+
+.form .block{background-color:#FFFDEE; margin:1px 0 0 0; padding:15px 5px; font-size:15px; text-align:center; border-bottom: #e8e8e8 dotted 1px;}
+.form .block>span{color:#FF6C00; font-weight:bold;}
+.form .block .ShowTime{color:#fb7403;}
+
+.dailogQueue{padding:20px;}
+.dailogQueue>span{color:#fb7403; font-size:18px; font-weight:normal;}
+
+.dailogQueue .loading{width:50px; height:50px; float:left; margin:2px 0 0 0;}
+.dailogQueue .loading{background:url(loading.gif) no-repeat center center; background-size:contain;}
+.dailogQueue .content{float:left; margin:5px 0 0 20px; font-size:16px; line-height:23px; font-weight:bold;}
+
+.dailogQueue .confirm>span{font-size:16px; font-weight:bold;}
+.dailogQueue .confirm i{color:#fb7403; font-style:normal;}
+
+
+.orderBtn{text-align:center; padding:10px; margin:20px 0 0 0;}
+.orderBtn a{padding:10px 40px; cursor:pointer; color:#FFF;}
+.orderBtn .confirm{background:#FF8000;border:1px solid #FF8000;}
+.orderBtn .cannel{background:#EDEBEB;border:1px solid #CCC; color:#333; margin-right:10px;}
+
+
+.paymentBanks ul{margin:0px; padding:10px 0px; width:700px;}
+.paymentBanks ul li{margin:10px; padding:0px; width:130px; height:52px; list-style:none; float:left;}
+.paymentBanks ul li label{display:block; width:130px; height:52px; text-indent:-1000000px; cursor:pointer;}
+
+.paymentBanks ul li .bank_00011000{background-image:url(banks/00011000.gif);}
+.paymentBanks ul li .bank_00011001{background-image:url(banks/00011001.gif);}
+.paymentBanks ul li .bank_01020000{background-image:url(banks/01020000.gif);}
+.paymentBanks ul li .bank_01030000{background-image:url(banks/01030000.gif);}
+.paymentBanks ul li .bank_01040000{background-image:url(banks/01040000.gif);}
+.paymentBanks ul li .bank_01050000{background-image:url(banks/01050000.gif);}
+.paymentBanks ul li .bank_03080000{background-image:url(banks/03080000.gif);}
+.paymentBanks ul li .bank_33000010{background-image:url(banks/33000010.gif);}
+.paymentBanks ul li .bank_01009999{background-image:url(banks/01009999.gif);}
+.paymentBanks ul li .bank_33000020{background-image:url(banks/33000020.gif);}
+
+.contact{padding:15px 0px;}
+.contact>strong{font-size:24px; font-weight:normal; padding:20px 0px; display:block;}
+.contact>div{font-size:16px; font-weight:normal; padding:10px 0px;}
+
+.dynamic{font-size:18px; padding:20px; border:1px solid #fbd800; background-color:#fffbe5; margin:20px 0 0 0;}
+.noquery{font-size:16px; padding:10px; background-color:#FFFDEE; margin:20px 0 0 0; color:#FF6C00; text-align:center; border:#f5f5f5 solid 1px;}
+
+.piaotable{width:600px;}
+.piaotable input{width:230px;}
+.piaotable select{width:230px; height:22px;}
+.piaotable .input1{width:81px;}
+.piaotable .input2{width:523px;}
+.piaotable tr:last-child td{border:none; padding:10px;}
+.piaotable input[type=button]{background-color:#fb7403; color:#FFF; border:none; cursor:pointer; height:40px; line-height:40px; width:200px;}
+
+
+.flight_actual{width:600px; height:300px; position:relative; margin:40px 0 20px -80px; border:#EEE solid 3px; border-radius:10px;}
+.flight_actual .title{position:absolute; top:20px; text-align:center; width:100%; font-size:16px; border-bottom:#EEE dashed 1px; padding-bottom:20px;}
+
+.flight_actual .depart{position:absolute; top:90px; left:45px; text-align:right; width:100px;}
+.flight_actual .depart .real{font-size:38px; margin:12px 0px;}
+.flight_actual .depart .esti{color:#999;}
+
+.flight_actual .status{position:absolute; top:90px; left:250px; width:80px; height:80px; text-align:center; line-height:80px; font-size:26px; background-color:#7FCC20; color:#FFF; border-radius:80px;}
+
+.flight_actual .arrive{position:absolute; top:90px; right:45px; text-align:left; width:100px;}
+.flight_actual .arrive .real{font-size:38px; margin:12px 0px 12px -5px;}
+.flight_actual .arrive .esti{color:#999;}
+
+.flight_actual .depart_airport{position:absolute; top:200px; left:30px;}
+.flight_actual .arrive_airport{position:absolute; top:200px; right:30px;}
+
+.flight_actual .filght_line{position:absolute; top:206px; left:200; background-color:#7FCC20; height:5px; width:200px; border-radius:10px;}
+.flight_actual .filght_other{position:absolute; top:220px; left:245; font-size:12px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta charset="utf-8" />
+<title>验证码</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/trainCaptcha.js"></script>
+<link type="text/css" href="css/trainCaptcha.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+<input type="text" id="randCode" name="randCode" value=""/>
+<div style="padding:100px">
+<div id="TrainCaptcha" class="TrainCaptcha"></div>
+</div>
+
+<input type="button" id="button" value="GO"></body>
+
+<script>
+$('#TrainCaptcha').TrainCaptcha({input:"randCode",imgUrl:"https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew?module=login&rand=sjrand"});
+
+
+$(function(){
+   $('#button').click(function(){
+          $('#randCode').data('flag', 'initial').click();
+
+   });	
+})
+
+
+
+</script>
+</body>
+</html>

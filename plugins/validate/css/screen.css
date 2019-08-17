@@ -1,0 +1,8 @@
+em { font-style:normal; font-size:12px; }
+em.error {background:url(../images/unchecked.gif) no-repeat 0 1px; padding-left: 18px; color:#EC514C; background-size: 13px 13px;}
+em.success {background:url(../images/checked.gif) no-repeat 0 1px; padding-left: 18px; color:#3CA500; background-size: 13px 13px;}
+
+input.checkbox { border: none }
+input:focus { border: 1px solid #DDDDDD; }
+input.error { border: 1px solid #DDDDDD; background-color:#FCDBDA;}
+form.cmxform .gray * { color: gray; }

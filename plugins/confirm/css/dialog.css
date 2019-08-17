@@ -1,0 +1,16 @@
+.dialog{margin:15px auto;position:absolute;z-index:9999;background:#fff;font-family: "Microsoft YaHei"}
+.dialog .header{height:40px;background:#2487C9;position:relative;line-height:40px;width:100%;z-index:9999;}
+.dialog .header h2{font-size:15px;text-indent:10px;color:#fff;height:40px;line-height:40px;cursor:move; -webkit-user-select:none; -moz-user-select:none; user-select:none;margin:0px!important;}
+.dialog .header s{cursor:pointer;position:absolute;width:14px;height:14px;right:10px;top:12px;text-align:center;line-height:16px;font-size:0;z-index:10000;text-indent:-9999px;background:#2487C9 url(close-btn.png) no-repeat center center;}
+.dialog .body{width:100%;background:#fff;position:relative;z-index:9999;}
+.dialog .body .body-content{padding:10px;overflow-y:auto;}
+.dialog .footer{width:100%;height:60px;line-height:60px;background:#FFFFFF;z-index:9999;border-top:1px solid #f3f3f3;position:absolute;bottom:0;left:0;}
+.dialog .footer .buttons{float:right;margin-right:10px;}
+.dialog .footer .buttons button{height:30px;line-height:30px;font-size:16px;margin-top:15px;margin-left:10px;min-width:100px;border:none;color:#fff;font-size:14px;cursor:pointer;}
+.dialog .footer .buttons button.confirm{background:#FF8000;}
+.dialog .footer .buttons button.cannel{background:#EDEBEB;border:1px solid #CCC; color:#333}
+.layer-box{background:#000;position:absolute;left:0;top:0;width:100%;height:100%;opacity:0.5;z-index:9998;filter:Alpha(opacity=50); }
+.dialog .lay{position:absolute;z-index:9998;width:100%;height:100%;left:0;top:0;}
+.layer-box .layer{position:absolute;z-index:9997;}
+.layer-box .back{position:absolute;z-index:9998;width:100%; height:100%; left:0; top:0; opacity:0.60; filter:Alpha(opacity=55);}
+.layer-box .lay{width:100%; height:100%; position:absolute; left:0; top:0; filter:Alpha(opacity=0); z-index: 9997;}
