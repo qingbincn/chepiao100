@@ -6,6 +6,10 @@
 #### 2 接口介绍
 >  接口对外数据全部以http协议发布，请求全部以POST方式，返回数据全部是JSON格式, 除非有“选填”说明，全部请求参数都是必填。
 
+历史版本：
+ V1.0 http://www.chepiao100.com/open.html  
+ V2.0 http://opendemo.chepiao100.com/help/train_api_v2.0.pdf  
+
 ##### 2.1 用户授权
 **测试期暂时免费，合作联系QQ：89914505 / 2994273988**
 演示地址：http://v3.chepiao100.com/demo
