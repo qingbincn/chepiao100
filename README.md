@@ -856,7 +856,7 @@ array(4) {
 ```
 
 ##### 8.2 取消未支付订单
- 地址：http://v3.chepiao100.com/v30.api?do=train.order.epay
+ 地址：http://v3.chepiao100.com/v30.api?do=train.order.cancel
 
 |函数/参数|用途|
 |--|--|
