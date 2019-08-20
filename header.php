@@ -26,8 +26,6 @@ error_reporting(E_ALL^E_NOTICE);
 <?php endif; ?>
 <div class="menu">
 <a href="ticket.php">车票预定</a>
-<a href="code.php">车次查询</a>
-<a href="station.php">车站查询</a>
 <a href="passenger.php">乘客管理</a>
 <a href="order.php">订单管理</a>
 <a href="agency.php">代售点查询</a>

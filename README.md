@@ -309,6 +309,8 @@ array(4) {
       }
       ["order_token"]=>
       string(456) ""     // 订票Token
+      ["time_token"]=>
+      string(323) ""     // 时刻Token
       ["button_text"]=>  
       string(6) "预订"   // 订票Button显示文本
     }
@@ -317,166 +319,59 @@ array(4) {
 ```
 
 
-##### 4.2 车次查询
->  接口说明：使用第三方数据  
+##### 4.2 时刻查询
   
-地址：http://v3.chepiao100.com/v30.api?do=train.ticket.code
+地址：http://v3.chepiao100.com/v30.api?do=train.ticket.time
 
 |函数/参数|用途|
 |---|---|
-| train_code | 车次 (大写)  |
+| time_token | 时刻Token  |
 
 返回数据
 ```
-["errMsg"]=>
+array(3) {
+  ["errMsg"]=>
   string(1) "Y"
   ["status"]=>
   int(1)
   ["datas"]=>
-  array(3) {
-    ["summ"]=>
-    array(9) {               // 车次摘要数据
+  array(2) {
+    ["info"]=>
+    array(5) {
       ["train_code"]=>
-      string(4) "K287"       // 车次
-      ["train_class"]=>
-      string(6) "快速"       // 等级
+      string(4) "G143"       // 车次
+      ["train_class"]=>  
+      string(6) "高速"       // 等级
       ["start_station"]=>
-      string(6) "南昌"       // 始发
+      string(9) "北京南"     // 发站
       ["end_station"]=>
-      string(9) "上海南"     // 终到
-      ["start_time"]=>
-      string(5) "06:24"      // 发时
-      ["arrive_time"]=>
-      string(5) "20:24"      // 到时
-      ["cost_time"]=>
-      string(15) "10小时0分钟"  // 历时
-      ["mileage"]=>
-      string(9) "786公里"      // 里程
-      ["pr_info"]=>            // 票价信息
-      array(4) {
-        .....
-        [0]=>  
-        array(2) {
-          ["na"]=>
-          string(6) "硬座"    // 席别
-          ["pr"]=>
-          int(105)           // 票价
-        }
-        ....
-      }
+      string(12) "上海虹桥"  // 到站
+      ["stop_num"]=>
+      int(6)                // 停靠次数
     }
-    ["head"]=>
-    array(10) {
-      [0]=>
-      string(6) "站次"
-      [1]=>
-      string(6) "站名"
-      [2]=>
-      string(6) "日期"
-      [3]=>
-      string(6) "到达"
-      [4]=>
-      string(6) "开车"
-      [5]=>
-      string(6) "停车"
-      [6]=>
-      string(6) "里程"
-      [7]=>
-      string(6) "硬座"
-      [8]=>
-      string(9) "硬卧下"
-      [9]=>
-      string(9) "软卧下"
-    }
-    ["item"]=>
-    array(7) {
-      ...
-      [0]=>
-      array(10) {
-        [0]=>
-        int(1)
-        [1]=>
-        string(9) "上海南"
-        [2]=>
-        string(1) "-"
-        [3]=>
-        string(9) "起点站"
-        [4]=>
-        string(5) "20:24"
-        [5]=>
-        string(1) "-"
-        [6]=>
-        int(0)
-        [7]=>
-        int(0)
-        [8]=>
-        string(1) "0"
-        [9]=>
-        string(1) "0"
-      }
-      ...
-    }
-  }
-}
-```
-
-##### 4.3 车站查询
->  接口说明：使用第三方数据  
-  
-地址：http://v3.chepiao100.com/v30.api?do=train.ticket.station
-
-|函数/参数|用途|
-|---|---|
-| station_name | 车站名称  |
-
-返回数据
-```
-["errMsg"]=>
-  string(1) "Y"
-  ["status"]=>
-  int(1)
-  ["datas"]=>
-  array(79) {
-    [0]=>
-    array(10) {
-      ["train_code"]=>
-      string(5) "G1355"          // 车次
-      ["start_station"]=>
-      string(12) "上海虹桥"      // 如发
-      ["end_station"]=>
-      string(9) "长沙南"         // 终到
-      ["start_time"]=>
-      string(5) "13:47"         // 发时
-      ["arrive_time"]=>
-      string(5) "19:25"         // 到时
-      ["cost_time"]=>
-      string(12) "5小时38分"    // 历时
-      ["train_class"]=>
-      string(12) "高速动车"     // 等级
-      ["start_flag"]=>
-      string(5) "cross"         // start 始发 cross 过路
-      ["end_flag"]=>
-      string(5) "cross"         // end 终到 cross 过路
+    ["items"]=>
+    array(6) {
       ....
-      ["pr_info"]=>
-      array(4) {                // 票价信息
-        ....
-        [0]=>
-        array(2) {
-          ["pr"]=>
-          float(798.5)         // 票价
-          ["na"]=>
-          string(9) "一等座"    // 席别
-        }
-        .....
+      [0]=>
+      array(5) {
+        ["station_no"]=>
+        string(2) "01"       // 站序
+        ["station_name"]=>
+        string(9) "北京南"   // 车站
+        ["start_time"]=>
+        string(5) "07:50"    // 发车
+        ["arrive_time"]=>
+        string(5) "07:50"    // 到站
+        ["stopover_time"]=>
+        string(4) "----"     // 停车时间
       }
+      ....
     }
-    ....
   }
 }
 ```
 
-##### 4.4 正晚点查询
+##### 4.3 正晚点查询
   
 地址：http://v3.chepiao100.com/v30.api?do=train.ticket.dynamic
 

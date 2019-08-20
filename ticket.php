@@ -42,8 +42,10 @@ if (!empty($_GET['from_station'])&&!empty($_GET['to_station'])&&!empty($_GET['tr
 	   </tr>
        <?php foreach ($data['datas'] as $key=>$val): ?>
        <tr>
-         <td><a href="code.php?train_code=<?php echo $val['train_code']; ?>" target="_blank" name="车次">
+         <td>
+         <a href="ticket-time.php?time_token=<?php echo $val['time_token']; ?>&width=450" class="jTip" id="T_<?php echo $key; ?>" name="车次">
 		 <?php echo $val['train_code']; ?></a></td>
+         </td>
          <td><?php echo $val['from_station'].'<BR/>'.$val['to_station']; ?></td>
          <td><?php echo $val['start_time'].'<BR/>'.$val['arrive_time']; ?></td>
          <td>
