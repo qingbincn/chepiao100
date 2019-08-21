@@ -2,16 +2,27 @@
 // 验证码
 session_start();
 error_reporting(E_ALL^E_NOTICE);
+require 'model/TrainApi.php';
 
 // 提取验证码
 if ($_GET['action'] == 'dama') {
-  echo $_SESSION['result'];
-  unset($_SESSION['result']);
-  exit();
+    if ($base64 = $_SESSION['base64']) {
+        $param = [
+            'base64'   => $base64,
+            'username' => 'suanyaios',
+            'password' => 'suanyaios'
+        ];
+        $train = new TrainApi();
+        $train->method('train.ocr.yundama');
+        $data = $train->action($param);
+        if ($data['errMsg'] == 'Y') {
+            echo $data['datas']['result'];
+        }
+    }
+    exit();
 }
 
-//header('Content-type: image/jpg');
-require 'model/TrainApi.php';
+header('Content-type: image/jpg');
 $module = $_GET['module'];
 
 $param = array();
@@ -23,26 +34,11 @@ $train->method('train.captcha.base64');
 $data = $train->action($param);
 
 if ($data['errMsg'] == 'Y') {
-    echo base64_decode($data['datas']['base64']);
-    exit();
+    $base64 = $data['datas']['base64'];
+    $_SESSION['base64'] = $data['datas']['base64'];
+    echo base64_decode($base64);
 } else {
+    unset($_SESSION['base64']);
     echo file_get_contents('css/images/default.jpg');
-    exit();
-}
-
-// 自动识别验证码
-$dmParam = [
-    'base64'   => $data['datas']['base64'], 
-    'username' => 'suanyaios', 
-    'password' => 'suanyaios'
-];
-
-$train = new TrainApi();
-$train->method('train.ocr.yundama');
-$data = $train->action($dmParam);
-
-
-if ($data['errMsg'] == 'Y') {
-    $_SESSION['answer'] =  $data['datas']['answer'];
-    $_SESSION['result'] = $data['datas']['result'];
+    
 }

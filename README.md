@@ -51,7 +51,7 @@ $header => [
 | -- | -- |
 | 2019/08/19 | 正式发布V3.0完整功能测试版  |
 | 2019/08/20 | 新增列车时刻表功能; 原车次查询，车站查询下线 |
-
+| 2019/08/21 | 优化验证码自动识别流程，新增“超级鹰” |
 
 #### 3 用户登录
 > 使用12306.cn账号进行授权登录
@@ -106,16 +106,20 @@ array(2) {
 ```
 
 ##### 3.4 验证码识别
-> 暂时只支持  http://www.yundama.com/  
   
 地址：http://v3.chepiao100.com/v30.api?do=train.ocr.yundama
+
+|DO|平台|地址|
+|---|---|
+| train.ocr.yundama | 打码云 | https://www.yundama.com |
+| train.ocr.chaojiying | 超级鹰 | https://www.chaojiying.com |
 
 |函数/参数|用途|
 |---|---|
 |token| Token值 |
 |base64 | 图片Base64编码 |
-| username | 打码平台账号 |
-| password | 打码平台密码  |
+|username | 打码平台账号 |
+|password | 打码平台密码  |
 
 返回数据
 ```
