@@ -109,10 +109,11 @@ array(2) {
   
 地址：http://v3.chepiao100.com/v30.api?do=train.ocr.yundama
 
-|DO|平台|地址|
-| -- | -- |
+| DO | 平台  | 地址 |
+| -- | -- | -- |
 | train.ocr.yundama | 打码云 | https://www.yundama.com |
 | train.ocr.chaojiying | 超级鹰 | https://www.chaojiying.com |
+
 
 |函数/参数|用途|
 |---|---|
