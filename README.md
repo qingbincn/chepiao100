@@ -8,11 +8,11 @@
 
 历史版本：  
  V1.0 http://www.chepiao100.com/open.html  
- V2.0 http://opendemo.chepiao100.com/help/train_api_v2.0.pdf  
+ V2.0 http://openapi.chepiao100.com/v2/open/demo/help/train_api_v2.0.pdf
 
 ##### 2.1 用户授权
 **测试期暂时免费，合作联系QQ：89914505 / 2994273988**
-演示地址：http://v3.chepiao100.com/demo
+演示地址：http://openapi.chepiao100.com/v3/
 
 ```php
 // 测试账号
@@ -43,7 +43,7 @@ $header => [
 >  数据中心接口接收和返回统一以UTF-8字符集编码格式进行接收返回   
 >  WEB应用请在网页头部添加  
 ```html
-<script type="text/javascript" src="http://v3.chepiao100.com/script.js"></script>
+<script type="text/javascript" src="http://openapi.chepiao100.com/v3/script.js"></script>
 ```
 
 ##### 2.3 更新记录
@@ -52,6 +52,7 @@ $header => [
 | 2019/08/19 | 正式发布V3.0完整功能测试版  |
 | 2019/08/20 | 新增列车时刻表功能; 原车次查询，车站查询下线 |
 | 2019/08/21 | 优化验证码自动识别流程，新增“超级鹰” |
+| 2020/05/15 | 迁移服务器调整接口地址 |
 
 #### 3 用户登录
 > 使用12306.cn账号进行授权登录
@@ -61,7 +62,7 @@ $header => [
 ![](https://github.com/phpbin/chepiao100/blob/master/css/images/img3.1.png)
 
 ##### 3.2 获取Token
-地址：http://v3.chepiao100.com/v30.api?do=train.user.token
+地址：http://openapi.chepiao100.com/v3.api?do=train.user.token
 
 正确返回
 ```
@@ -88,7 +89,7 @@ array(3) {
 ```
 
 ##### 3.3 生成验证码
-地址：http://v3.chepiao100.com/v30.api?do=train.captcha.base64
+地址：http://openapi.chepiao100.com/v3.api?do=train.captcha.base64
 
 |函数/参数|用途|
 |---|---|
@@ -107,7 +108,7 @@ array(2) {
 
 ##### 3.4 验证码识别
   
-地址：http://v3.chepiao100.com/v30.api?do=train.ocr.yundama
+地址：http://openapi.chepiao100.com/v3.api?do=train.ocr.yundama
 
 | DO | 平台  | 地址 |
 | -- | -- | -- |
@@ -136,7 +137,7 @@ array(3) {
 ```
 
 ##### 3.5 验证码校验
-地址：http://v3.chepiao100.com/v30.api?do=train.captcha.check 
+地址：http://openapi.chepiao100.com/v3.api?do=train.captcha.check 
 
 |函数/参数|用途|
 |---|---|
@@ -165,7 +166,7 @@ array(2) {
 ```
 
 ##### 3.6 用户登录
-地址：http://v3.chepiao100.com/v30.api?do=train.user.login  
+地址：http://openapi.chepiao100.com/v3.api?do=train.user.login  
 
 |函数/参数|用途|
 |---|---|
@@ -206,7 +207,7 @@ array(2) {
 ##### 3.7 用户信息
 > 判断当前token是否已过期  
 
-地址：http://v3.chepiao100.com/v30.api?do=train.user.info
+地址：http://openapi.chepiao100.com/v3.api?do=train.user.info
 
 返回数据
 ```
@@ -230,7 +231,7 @@ array(4) {
 ##### 3.8 登录状态判断
 > 判断当前token是否已过期  
 
-地址：http://v3.chepiao100.com/v30.api?do=train.user.auth
+地址：http://openapi.chepiao100.com/v3.api?do=train.user.auth
 
 |函数/参数|用途|
 |---|---|
@@ -253,7 +254,7 @@ array(4) {
 ##### 4.1 余票查询
 >  混合接口：余票使用官网，票价使用第三方数据  
   
-地址：http://v3.chepiao100.com/v30.api?do=train.ticket.query
+地址：http://openapi.chepiao100.com/v3.api?do=train.ticket.query
 
 |函数/参数|用途|
 |---|---|
@@ -332,7 +333,7 @@ array(4) {
 
 ##### 4.2 时刻查询
   
-地址：http://v3.chepiao100.com/v30.api?do=train.ticket.time
+地址：http://openapi.chepiao100.com/v3.api?do=train.ticket.time
 
 |函数/参数|用途|
 |---|---|
@@ -384,7 +385,7 @@ array(3) {
 
 ##### 4.3 正晚点查询
   
-地址：http://v3.chepiao100.com/v30.api?do=train.ticket.dynamic
+地址：http://openapi.chepiao100.com/v3.api?do=train.ticket.dynamic
 
 |函数/参数|用途|
 |---|---|
@@ -413,7 +414,7 @@ array(3) {
 ![](https://github.com/phpbin/chepiao100/blob/master/css/images/img5.1.png)
 
 ##### 5.2 订单信息
-地址：http://v3.chepiao100.com/v30.api?do=train.order.submit
+地址：http://openapi.chepiao100.com/v3.api?do=train.order.submit
 
 |函数/参数|用途|
 |---|---|
@@ -471,7 +472,7 @@ array(3) {
 
 
 ##### 5.3 订单检查
-地址：http://v3.chepiao100.com/v30.api?do=train.order.check
+地址：http://openapi.chepiao100.com/v3.api?do=train.order.check
 
 |函数/参数|用途|
 |---|---|
@@ -500,7 +501,7 @@ array(3) {
 ```
 
 ##### 5.4 提交队列
-地址：http://v3.chepiao100.com/v30.api?do=train.order.queue
+地址：http://openapi.chepiao100.com/v3.api?do=train.order.queue
 
 |函数/参数|用途|
 |---|---|
@@ -532,7 +533,7 @@ array(3) {
 ##### 5.5 确认提交
 > 如果 is_choose == Y可选席别位置，否则choose_seat必需为空
   
-地址：http://v3.chepiao100.com/v30.api?do=train.order.confirm
+地址：http://openapi.chepiao100.com/v3.api?do=train.order.confirm
 
 |函数/参数|用途|
 |--|--|
@@ -559,7 +560,7 @@ array(3) {
 ##### 5.6 等待订单
 > 提交confirm后，需要多次调用该接口获取订单的状态，如果出现订单号表示提交成功
   
-地址：http://v3.chepiao100.com/v30.api?do=train.order.wait
+地址：http://openapi.chepiao100.com/v3.api?do=train.order.wait
 
 |函数/参数|用途|
 |--|--|
@@ -582,7 +583,7 @@ array(3) {
 ##### 5.7 订单确认
 >  最后需认订单是否提交成功, errMsg==Y &&status==1 表示已经提交成功了
   
-地址：http://v3.chepiao100.com/v30.api?do=train.order.result
+地址：http://openapi.chepiao100.com/v3.api?do=train.order.result
 
 |函数/参数|用途|
 |--|--|
@@ -608,7 +609,7 @@ array(3) {
 ![](https://github.com/phpbin/chepiao100/blob/master/css/images/img6.1.png)
 
 ##### 6.2 支付方式
- 地址：http://v3.chepiao100.com/v30.api?do=train.pay.gateway
+ 地址：http://openapi.chepiao100.com/v3.api?do=train.pay.gateway
 
 |函数/参数|用途|
 |--|--|
@@ -653,7 +654,7 @@ array(3) {
 ```
 
 ##### 6.3 支付跳转
- 地址：http://v3.chepiao100.com/v30.api?do=train.pay.epay
+ 地址：http://openapi.chepiao100.com/v3.api?do=train.pay.epay
 
 |函数/参数|用途|
 |--|--|
@@ -690,7 +691,7 @@ array(3) {
 
 #### 8 订单管理
 ##### 8.1 未支付订单
- 地址：http://v3.chepiao100.com/v30.api?do=train.order.unpaid
+ 地址：http://openapi.chepiao100.com/v3.api?do=train.order.unpaid
 
 |函数/参数|用途|
 |--|--|
@@ -766,7 +767,7 @@ array(3) {
 ```
 
 ##### 8.2 取消未支付订单
- 地址：http://v3.chepiao100.com/v30.api?do=train.order.cancel
+ 地址：http://openapi.chepiao100.com/v3.api?do=train.order.cancel
 
 |函数/参数|用途|
 |--|--|
@@ -784,7 +785,7 @@ array(3) {
 ```
 
 ##### 8.3 已完成订单管理
- 地址：http://v3.chepiao100.com/v30.api?do=train.order.query
+ 地址：http://openapi.chepiao100.com/v3.api?do=train.order.query
 
 |函数/参数|用途|
 |--|--|
@@ -866,7 +867,7 @@ array(3) {
 ##### 8.4 退票提醒
 > 说明：退票提醒之后，要紧接着 确认退票才能操作成功。
   
-地址：http://v3.chepiao100.com/v30.api?do=train.order.affirm
+地址：http://openapi.chepiao100.com/v3.api?do=train.order.affirm
 
 |函数/参数|用途|
 |--|--|
@@ -901,7 +902,7 @@ array(3) {
 
 ##### 8.5 确认退票
   
-地址：http://v3.chepiao100.com/v30.api?do=train.order.refund
+地址：http://openapi.chepiao100.com/v3.api?do=train.order.refund
 
 
 返回数据
@@ -928,7 +929,7 @@ array(3) {
 ##### 9.1 常用乘车人
 >  场景：订票时选乘车人使用该接口
   
- 地址：http://v3.chepiao100.com/v30.api?do=train.passenger.dtos
+ 地址：http://openapi.chepiao100.com/v3.api?do=train.passenger.dtos
 
 |函数/参数|用途|
 |--|--|
@@ -968,7 +969,7 @@ array(3) {
 ```
  
 ##### 9.2 乘车人列表
- 地址：http://v3.chepiao100.com/v30.api?do=train.passenger.lists
+ 地址：http://openapi.chepiao100.com/v3.api?do=train.passenger.lists
 
 |函数/参数|用途|
 |--|--|
@@ -1015,7 +1016,7 @@ array(3) {
 ```
 
 ##### 9.3 添加乘车人
-地址：http://v3.chepiao100.com/v30.api?do=train.passenger.lists
+地址：http://openapi.chepiao100.com/v3.api?do=train.passenger.lists
    
 |函数/参数|用途|
 |--|--|
@@ -1038,7 +1039,7 @@ array(3) {
 ```
 
 ##### 9.4 编辑乘车人
- 地址：http://v3.chepiao100.com/v30.api?do=train.passenger.edit
+ 地址：http://openapi.chepiao100.com/v3.api?do=train.passenger.edit
 
 |函数/参数|用途|
 |--|--|
@@ -1065,7 +1066,7 @@ array(3) {
 ```
 
 ##### 9.5 删除乘车人
- 地址：http://v3.chepiao100.com/v30.api?do=train.passenger.delete
+ 地址：http://openapi.chepiao100.com/v3.api?do=train.passenger.delete
 
 |函数/参数|用途|
 |--|--|
@@ -1089,7 +1090,7 @@ array(3) {
 #### 10 代售点查询
 
 ##### 10.1 省份列表
-地址：http://v3.chepiao100.com/v30.api?do=train.agency.province
+地址：http://openapi.chepiao100.com/v3.api?do=train.agency.province
 
  返回数据
 ```
@@ -1108,7 +1109,7 @@ array(3) {
 ```
 
 ##### 10.2 城市查询
-地址：http://v3.chepiao100.com/v30.api?do=train.agency.city
+地址：http://openapi.chepiao100.com/v3.api?do=train.agency.city
 
 |函数/参数|用途|
 |--|--|
@@ -1132,7 +1133,7 @@ array(3) {
 ```
 
 ##### 10.3 县区查询
-地址：http://v3.chepiao100.com/v30.api?do=train.agency.county
+地址：http://openapi.chepiao100.com/v3.api?do=train.agency.county
 
 |函数/参数|用途|
 |--|--|
@@ -1157,7 +1158,7 @@ array(3) {
 ```
 
 ##### 10.4 代售点查询
-地址：http://v3.chepiao100.com/v30.api?do=train.agency.query
+地址：http://openapi.chepiao100.com/v3.api?do=train.agency.query
 
 |函数/参数|用途|
 |--|--|
@@ -1195,7 +1196,7 @@ array(3) {
 #### 11 其他查询
 
 ##### 11.1 汽车票查询
-地址：http://v3.chepiao100.com/v30.api?do=train.bus.query
+地址：http://openapi.chepiao100.com/v3.api?do=train.bus.query
 
 
 |函数/参数|用途|
